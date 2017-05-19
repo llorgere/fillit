@@ -9,11 +9,13 @@
 /*   Updated: 2017/05/15 18:11:44 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft/libft.h"
 
 int		ft_check_tetra(char *tetra)
 {
 	int		i;
 	int		l;
+	int		j;
 
 	i = 0;
 	j = i + 4;
@@ -35,7 +37,8 @@ int		ft_check_tetra(char *tetra)
 				if (tetra[i + 5] == '#')
 					l++;
 				else
-					return(0);
+					return (0);
+				i++;
 			}
 			else
 				return (0);
