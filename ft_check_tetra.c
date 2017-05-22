@@ -10,40 +10,46 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft/libft.h"
+#include <stdio.h>
 
 int		ft_check_tetra(char *tetra)
 {
 	int		i;
 	int		l;
 	int		j;
+	int		la;
 
 	i = 0;
 	j = i + 4;
 	l = 0;
 	while (i <= 19)
 	{
+//		printf("test 1 du ft_check");
 		while (i < j)
 		{
+//			printf("test 2 du ft_check");
 			if (tetra[i] == '.')
 				i++;
 			else if (tetra[i] == '#')
 			{
+				la = 0;
 				if (tetra[i - 1] == '#')
-					l++;
+					la++;
 				if (tetra[i + 1] == '#')
-					l++;
+					la++;
 				if (tetra[i - 5] == '#')
-					l++;
+					la++;
 				if (tetra[i + 5] == '#')
-					l++;
-				else
+					la++;
+				if (la == 0)
 					return (0);
+				l = l + la;
 				i++;
 			}
 			else
 				return (0);
 		}
-		if (tetra[i] != '$')
+		if (tetra[i] != '\n')
 			return (0);
 		i++;
 		j = i + 4;
