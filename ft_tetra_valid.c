@@ -6,7 +6,7 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 15:08:15 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/15 17:03:34 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/05/23 11:50:53 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_check_tetra(char *tetra);
 int		ft_tetra_valid(char *file, int n)
 {
 	int		fd;
-	char	buff[BUFF_SIZE];
+	char	buff[BUFF_SIZE + 1];
 	char	**tab;
 //	int		ret;
 	int		i;
@@ -35,10 +35,10 @@ int		ft_tetra_valid(char *file, int n)
 //		if (ret == -1)
 //			return (-1);
 //		printf("%d %s\n", i, buff);
+		buff[21] = '\0';
 		printf("le dernier character du tetra %d est [%c]\n", (i + 1), buff[20]);
 		if (buff[20] == '\n' && i == (n - 20)/21)
 			return (-2);
-//		buff[21] = '\0';
 		else if (ft_check_tetra(buff) == 1)
 		{
 //			printf("check du ft_check");
@@ -47,7 +47,8 @@ int		ft_tetra_valid(char *file, int n)
 			i++;
 		}
 		else
-			return (-3);
+			return (-3);	
+		ft_bzero(buff, 22);
 	}
 
 	close(fd);
