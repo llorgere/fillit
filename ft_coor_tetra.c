@@ -6,12 +6,11 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/23 15:26:45 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/30 13:53:01 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/05/30 16:34:37 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libfil.h"
 
 char	**ft_row_tetra(char *tetra)
 {
@@ -21,30 +20,22 @@ char	**ft_row_tetra(char *tetra)
 	int		j;
 	char	**tab;
 
-//	printf("test0");
-	if(!(tab = (char **)malloc(sizeof(char *) * 4)))
+	if (!(tab = (char **)malloc(sizeof(char *) * 4)))
 		return (NULL);
 	row = 0;
 	i = 0;
 	j = 4;
-//	printf("test1");
 	while (i < 19)
 	{
 		col = 0;
-		if(!(tab[row] = (char *)malloc(sizeof(char) * 5)))
+		if (!(tab[row] = (char *)malloc(sizeof(char) * 5)))
 			return (NULL);
-		while (i < j)
-		{
-			tab[row][col] = tetra[i];
-			col++;
-			i++;
-		}
-		tab[row][col] = '\0';
-		row++;
+		while (++i < j)
+			tab[row][col++] = tetra[i];
+		tab[row++][col] = '\0';
 		i = i + 1;
 		j = i + 4;
 	}
-//	printf("tt va bien");
 	return (tab);
 }
 
@@ -58,10 +49,9 @@ int		**ft_coor_tetra(char **tetra)
 
 	sq = 0;
 	row = 0;
-//	printf("test 1 ft_coor");
-	if(!(coor = (int **)malloc(sizeof(int *) * 4)))
+	if (!(coor = (int **)malloc(sizeof(int *) * 4)))
 		return (NULL);
-	if(!(coor[sq] = (int *)malloc(sizeof(int) * 2)))
+	if (!(coor[sq] = (int *)malloc(sizeof(int) * 2)))
 		return (NULL);
 	coor[0][0] = 0;
 	coor[0][1] = 0;
@@ -78,7 +68,7 @@ int		**ft_coor_tetra(char **tetra)
 			}
 			else if (tetra[row][col] == '#')
 			{
-				if(!(coor[sq] = (int *)malloc(sizeof(int) * 2)))
+				if (!(coor[sq] = (int *)malloc(sizeof(int) * 2)))
 					return (NULL);
 				coor[sq][0] = col - ori[0];
 				coor[sq][1] = row - ori[1];
@@ -88,6 +78,5 @@ int		**ft_coor_tetra(char **tetra)
 		}
 		row++;
 	}
-//	coor[4]i = 69;
 	return (coor);
 }
