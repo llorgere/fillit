@@ -6,11 +6,11 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 12:10:57 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/30 15:06:57 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/05/30 16:38:32 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "libfil.h"
 #define BUFF_SIZE 1
 
 int		ft_tetra_nb_char(char *file)
@@ -27,17 +27,14 @@ int		ft_tetra_nb_char(char *file)
 	ret = 0;
 	while (read(fd, buff, BUFF_SIZE) != 0)
 		ret++;
-//	ft_putnbr(ret);
 	while (n < ret && n < 545)
 		n = n + 21;
 	if (n == ret)
 	{
-//		ft_putstr("valid number of character");
 		return (n);
 	}
 	else
 	{
-//		ft_putstr("invalid number of character");
 		return (0);
 	}
 	close(fd);
