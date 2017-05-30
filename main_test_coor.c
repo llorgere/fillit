@@ -17,16 +17,17 @@ int		main(void)
 {
 	int		i;
 	int		**tab;
-	char	*str = "...#\n...#\n...#\n...#\n\n";
+	char	*str = "...#\n..##\n...#\n....\n\n";
 
 	printf("%s\n", str);
 	i = 0;
 	printf("Debug: %d\n", i);
 	tab = ft_coor_tetra(ft_row_tetra(str));
+	printf("debug 2");
 	while (i < 4)
 	{
-		printf("[%d ;", tab[i][0]);
-		printf(" %d]", tab[i][1]);
+		printf("tetra %d est [%d ;", (i + 1), tab[i][0]);
+		printf(" %d]\n", tab[i][1]);
 		i++;
 	}
 	return(0);

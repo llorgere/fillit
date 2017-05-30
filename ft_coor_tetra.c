@@ -41,8 +41,8 @@ char	**ft_row_tetra(char *tetra)
 		}
 		tab[row][col] = '\0';
 		row++;
-		i = i + 2;
-		j = i + j;
+		i = i + 1;
+		j = i + 4;
 	}
 	printf("tt va bien");
 	return (tab);
@@ -58,6 +58,7 @@ int		**ft_coor_tetra(char **tetra)
 
 	sq = 0;
 	row = 0;
+	printf("test 1 ft_coor");
 	if(!(coor = (int **)malloc(sizeof(int *) * 4)))
 		return (NULL);
 	if(!(coor[sq] = (int *)malloc(sizeof(int) * 2)))
