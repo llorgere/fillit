@@ -6,7 +6,7 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/23 15:26:45 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/23 19:14:48 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/05/30 13:53:01 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ char	**ft_row_tetra(char *tetra)
 	int		j;
 	char	**tab;
 
-	printf("test0");
+//	printf("test0");
 	if(!(tab = (char **)malloc(sizeof(char *) * 4)))
 		return (NULL);
 	row = 0;
 	i = 0;
 	j = 4;
-	printf("test1");
+//	printf("test1");
 	while (i < 19)
 	{
 		col = 0;
@@ -44,7 +44,7 @@ char	**ft_row_tetra(char *tetra)
 		i = i + 1;
 		j = i + 4;
 	}
-	printf("tt va bien");
+//	printf("tt va bien");
 	return (tab);
 }
 
@@ -58,7 +58,7 @@ int		**ft_coor_tetra(char **tetra)
 
 	sq = 0;
 	row = 0;
-	printf("test 1 ft_coor");
+//	printf("test 1 ft_coor");
 	if(!(coor = (int **)malloc(sizeof(int *) * 4)))
 		return (NULL);
 	if(!(coor[sq] = (int *)malloc(sizeof(int) * 2)))

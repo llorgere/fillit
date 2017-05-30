@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_square.c                                        :+:      :+:    :+:   */
+/*   ft_check_posi.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/23 14:07:05 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/30 14:40:52 by llorgere         ###   ########.fr       */
+/*   Created: 2017/05/30 13:04:51 by llorgere          #+#    #+#             */
+/*   Updated: 2017/05/30 14:39:08 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 
-char	**ft_new_square(int	n)
+int		ft_check_posi(char **square, int **tetra, int row, int col, int n)
 {
-	char	**tab;
 	int		i;
-	int		j;
+//	char	**squareret;
 
-	if (!(tab = (char**)malloc(sizeof(char *) * n)))
-		return (0);
 	i = 0;
-	while (i < n)
+	while (i < 4)
 	{
-		if (!(tab[i] = (char*)malloc(sizeof(char) * n + 2)))
+		if ((row + tetra[i][0]) < 0 || (col + tetra[i][1]) < 0
+			|| (row + tetra[i][0]) >= n || (col + tetra[i][1]) >= n)
 			return (0);
-		j = 0;
-		while (j < n)
-		{
-			tab[i][j] = '.';
-			j++;
-		}
-		tab[i][j] = '\n';
-		j++;
-		tab[i][j] = '0';
+		else if(square[row + tetra[i][0]][col + tetra[i][1]] != '.')
+			return (0);
 		i++;
 	}
-	return (tab);
+	return (1);
 }
