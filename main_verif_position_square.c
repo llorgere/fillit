@@ -6,7 +6,7 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/30 13:44:43 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/30 14:40:40 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/05/30 17:20:26 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -40,8 +40,8 @@ int		main(void)
 	char	**square;
 	int		n;
 
-	n = 1;
-	tab = ft_coor_tetra(ft_row_tetra(striO0));
-	square = ft_square(n);
+	n = 4;
+	tab = ft_coor_tetra(ft_row_tetra(striT0));
+	square = ft_new_square(n);
 	printf("%d", ft_check_posi(square, tab, 0, 0, n));
 }

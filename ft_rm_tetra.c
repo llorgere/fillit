@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_rm_tetra.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/11 14:33:09 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/30 17:05:25 by llorgere         ###   ########.fr       */
+/*   Created: 2017/05/30 17:38:22 by llorgere          #+#    #+#             */
+/*   Updated: 2017/05/30 18:12:12 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libfil.h"
-#include <stdio.h>
-
-int		main(int ac, char **av)
+char	**ft_rm_tetra(char **square, int **tetra, int row, int col)
 {
-	if (ac != 2 || ft_tetra_nb_char(av[1]) == 0)
-		ft_putstr("error\n");
-	else if (!(ft_tetra_valid(av[1], ft_tetra_nb_char(av[1]))))
-		ft_putstr("error\n");
-	return (0);
+	int		i;
+
+	i = 0;
+	while (i < 4)
+	{
+		square[col + tetra[i][0]][row + tetra[0][1]] = '.';
+		i++;
+	}
+	return (square);
 }
