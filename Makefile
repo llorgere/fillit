@@ -6,7 +6,7 @@
 #    By: llorgere <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/15 12:55:31 by llorgere          #+#    #+#              #
-#    Updated: 2017/05/30 14:56:25 by llorgere         ###   ########.fr        #
+#    Updated: 2017/05/30 16:54:47 by acolas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = fillit
 SRC = ft_tetra_nb_char.c \
 	  ft_check_tetra.c \
 	  ft_tetra_valid.c \
-	  main.c
+	  main.c \
+	  ft_coor_tetra.c
 CC = gcc
 HEADER = ./libft/libft.a
 CFLAGS = -Wall -Wextra -Werror

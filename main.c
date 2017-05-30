@@ -6,17 +6,12 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 14:33:09 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/30 15:15:17 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/05/30 17:00:27 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "libfil.h"
 #include <stdio.h>
-
-int		ft_check_tetra(char *tetra);
-int		ft_tetra_valid(char *file, int n);
-int		ft_tetra_nb_char(char *file);
 
 int		main(int ac, char **av)
 {
