@@ -6,13 +6,13 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/23 14:07:05 by llorgere          #+#    #+#             */
-/*   Updated: 2017/05/30 14:40:52 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/05/30 16:36:54 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libfil.h"
 
-char	**ft_new_square(int	n)
+char	**ft_new_square(int n)
 {
 	char	**tab;
 	int		i;
