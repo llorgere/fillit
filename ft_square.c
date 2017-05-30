@@ -33,4 +33,5 @@ char	**ft_square(int	n)
 		tab[i][j] = '0';
 		i++;
 	}
+	return (tab);
 }
