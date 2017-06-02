@@ -6,7 +6,7 @@
 #    By: llorgere <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/15 12:55:31 by llorgere          #+#    #+#              #
-#    Updated: 2017/06/02 17:34:35 by acolas           ###   ########.fr        #
+#    Updated: 2017/06/02 18:24:47 by llorgere         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC = ft_tetra_nb_char.c \
 	  ft_tetra_valid.c \
 	  main.c \
 	  ft_coor_tetra.c \
-	  ft_backtracking_ite \
+	  ft_backtracking_ite.c \
 	  ft_check_posi.c \
 	  ft_new_square.c \
 	  ft_put_tetra.c \

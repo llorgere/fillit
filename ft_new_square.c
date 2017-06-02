@@ -6,7 +6,7 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/30 17:11:43 by llorgere          #+#    #+#             */
-/*   Updated: 2017/06/02 17:29:04 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/06/02 19:51:43 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libfil.h"
@@ -33,7 +33,7 @@ char	**ft_new_square(int	n)
 		}
 		tab[i][j] = '\n';
 		j++;
-		tab[i][j] = '0';
+		tab[i][j] = '\0';
 		i++;
 	}
 	return (tab);
