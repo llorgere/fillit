@@ -6,13 +6,13 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/02 16:45:40 by llorgere          #+#    #+#             */
-/*   Updated: 2017/06/02 17:29:41 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/06/02 17:43:46 by acolas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libfil.h"
 
-int		***tab(char **tetra, int nb_tetra)
+int		***ft_tab_to_int(char **tetra, int nb_tetra)
 {
 	int		i;
 	int		***tab;

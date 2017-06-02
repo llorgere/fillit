@@ -6,7 +6,7 @@
 #    By: llorgere <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/15 12:55:31 by llorgere          #+#    #+#              #
-#    Updated: 2017/06/02 17:21:21 by llorgere         ###   ########.fr        #
+#    Updated: 2017/06/02 17:34:35 by acolas           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,14 @@ SRC = ft_tetra_nb_char.c \
 	  ft_check_tetra.c \
 	  ft_tetra_valid.c \
 	  main.c \
-	  ft_coor_tetra.c
+	  ft_coor_tetra.c \
+	  ft_backtracking_ite \
+	  ft_check_posi.c \
+	  ft_new_square.c \
+	  ft_put_tetra.c \
+	  ft_rm_tetra.c \
+	  ft_tab_to_int.c
+
 CC = gcc
 HEADER = ./libft/libft.a
 CFLAGS = -Wall -Wextra -Werror
