@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rm_tetra.c                                      :+:      :+:    :+:   */
+/*   ft_tab_to_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/30 17:38:22 by llorgere          #+#    #+#             */
-/*   Updated: 2017/06/02 16:52:27 by llorgere         ###   ########.fr       */
+/*   Created: 2017/06/02 16:45:40 by llorgere          #+#    #+#             */
+/*   Updated: 2017/06/02 16:50:53 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	**ft_rm_tetra(char **square, int **tetra, int row, int col)
+#include "libfil.h"
+
+int		***tab(char **tetra, int nb_tetra)
 {
 	int		i;
+	int		***tab;
 
+	if(!(tab = (int ***)malloc(sizeof(char **) * nb_tetra)))
+		return (NULL);
 	i = 0;
-	while (i < 4)
+	while (i < nb_tetra)
 	{
-		square[col + tetra[i][0]][row + tetra[0][1]] = '.';
+		tab[i] = ft_coor_tetra(ft_row_tetra(tetra[i]));
 		i++;
 	}
-	return (square);
+	return (tab);
 }
