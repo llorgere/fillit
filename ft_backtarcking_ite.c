@@ -6,9 +6,10 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/02 15:45:43 by llorgere          #+#    #+#             */
-/*   Updated: 2017/06/02 17:12:41 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/06/02 17:27:27 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libfil.h"
 
 int		ft_backtracking_ite(char **square, int sq_s, int ***tab, int nb_tetra)
 {

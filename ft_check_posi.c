@@ -6,9 +6,10 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/30 13:04:51 by llorgere          #+#    #+#             */
-/*   Updated: 2017/06/02 16:24:27 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/06/02 17:27:30 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libfil.h"
 
 int		ft_check_posi(char **square, int **tetra, int pos, int sq_size)
 {

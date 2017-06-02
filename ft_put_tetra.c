@@ -6,9 +6,10 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/30 17:13:15 by llorgere          #+#    #+#             */
-/*   Updated: 2017/06/02 16:52:52 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/06/02 17:28:48 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libfil.h"
 
 char	**ft_put_tetra(char	**square, int **tetra, int col, int row, int num_tetra)
 {

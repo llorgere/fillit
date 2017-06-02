@@ -6,9 +6,10 @@
 /*   By: llorgere <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/30 17:38:22 by llorgere          #+#    #+#             */
-/*   Updated: 2017/06/02 16:52:27 by llorgere         ###   ########.fr       */
+/*   Updated: 2017/06/02 17:29:33 by llorgere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libfil.h"
 
 char	**ft_rm_tetra(char **square, int **tetra, int row, int col)
 {
